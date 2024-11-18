@@ -29,6 +29,7 @@ runs:
       # using your own package manager before calling streamlit-app-action.
       shell: bash
       run: |
+        cd src
         python -m pip install --upgrade pip
         pip install pytest
         if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
