@@ -40,6 +40,7 @@ runs:
       shell: bash
       run: |
         cp $GITHUB_ACTION_PATH/*.py .
+        cd src
         python -m pytest ${{ inputs.pytest-args }}
       env:
         APP_PATH: ${{ inputs.app-path }}
